@@ -1,0 +1,157 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait  .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-col-steps   { width: 48%; height: 100%; }
+  .mode-portrait  .sl-col-steps   { width: 100%; }
+  .mode-landscape .sl-col-outputs { width: 52%; height: 100%; }
+  .mode-portrait  .sl-col-outputs { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- ── Left: Steps ── -->
+    <div class="sl-col-steps flex flex-col justify-center p-12"
+         style="border-right: 1px solid #E2E8F0;">
+
+      <span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2 block">
+        How It Works
+      </span>
+      <h2 class="font-black text-slate-900 mb-8" style="font-size:1.75rem; line-height:1.2;">
+        Three steps.<br/>Interview-ready.
+      </h2>
+
+      <!-- Step 1 -->
+      <div class="flex gap-4 items-start mb-7">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0
+                     font-black text-white text-sm"
+             style="background:#0F2044;">1</div>
+        <div>
+          <h3 class="font-bold text-slate-800 text-sm mb-1">Upload your CV + paste the job</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            Upload your current CV as a PDF (or paste the text), then paste the job
+            title, description, and requirements you're targeting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Connector -->
+      <div class="ml-5 w-px h-4 mb-3" style="background:#CBD5E1;"></div>
+
+      <!-- Step 2 -->
+      <div class="flex gap-4 items-start mb-7">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0
+                     font-black text-white text-sm"
+             style="background:#0F2044;">2</div>
+        <div>
+          <h3 class="font-bold text-slate-800 text-sm mb-1">AI analyses the gap</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            CVTailor maps your profile against the role — identifying keyword gaps,
+            skill mismatches, and framing opportunities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Connector -->
+      <div class="ml-5 w-px h-4 mb-3" style="background:#CBD5E1;"></div>
+
+      <!-- Step 3 -->
+      <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0
+                     font-black text-white text-sm"
+             style="background:#22C55E;">3</div>
+        <div>
+          <h3 class="font-bold text-slate-800 text-sm mb-1">Get your three outputs — instantly</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            Download a tailored, ATS-ready CV; follow a role-specific interview
+            prep plan; and practise with an AI mock interview.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Right: Output cards ── -->
+    <div class="sl-col-outputs flex flex-col justify-center p-12 gap-4"
+         style="background:#F7FAFF;">
+
+      <span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1 block">
+        Your Outputs
+      </span>
+
+      <!-- Output A -->
+      <div class="rounded-2xl p-5 bg-white border flex gap-4 items-start"
+           style="border-color:#E2E8F0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+             style="background:#E6F9EE;">
+          <svg class="w-5 h-5" fill="none" stroke="#16A34A" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0
+                     1 2-2h5.586a1 1 0 0 1 .707.293l5.414
+                     5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider"
+                style="color:#16A34A;">Output A</span>
+          <h4 class="font-bold text-slate-800 text-sm mt-0.5 mb-1">Tailored CV</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            Role-aligned, ATS-optimised, with diff highlighting showing every edit.
+            Export as PDF immediately.
+          </p>
+        </div>
+      </div>
+
+      <!-- Output B -->
+      <div class="rounded-2xl p-5 bg-white border flex gap-4 items-start"
+           style="border-color:#E2E8F0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+             style="background:#EFF6FF;">
+          <svg class="w-5 h-5" fill="none" stroke="#2563EB" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0
+                     0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2
+                     2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2
+                     2m-6 9l2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider"
+                style="color:#2563EB;">Output B</span>
+          <h4 class="font-bold text-slate-800 text-sm mt-0.5 mb-1">Interview Prep Plan</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            Structured roadmap: topics, question categories, company research, and a
+            study schedule — downloadable as PDF.
+          </p>
+        </div>
+      </div>
+
+      <!-- Output C -->
+      <div class="rounded-2xl p-5 flex gap-4 items-start"
+           style="background:#0F2044;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+             style="background:rgba(34,197,94,0.2);">
+          <svg class="w-5 h-5" fill="none" stroke="#22C55E" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 0
+                     1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0
+                     0 1-2 2h-5l-5 5v-5z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider"
+                style="color:#22C55E;">Output C</span>
+          <h4 class="font-bold text-white text-sm mt-0.5 mb-1">Mock Interview</h4>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.65);">
+            AI asks role-relevant questions, you answer, and receive instant scored
+            feedback on content, structure, and delivery.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
