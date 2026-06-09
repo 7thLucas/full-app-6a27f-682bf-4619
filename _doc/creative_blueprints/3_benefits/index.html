@@ -1,37 +1,115 @@
 <style>
-  .mode-landscape .sl-metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-  .mode-portrait .sl-metrics-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .mode-landscape .sl-layout      { flex-direction: row; }
+  .mode-portrait  .sl-layout      { flex-direction: column; }
+  .mode-landscape .sl-col-header  { width: 40%; height: 100%; }
+  .mode-portrait  .sl-col-header  { width: 100%; }
+  .mode-landscape .sl-col-cards   { width: 60%; height: 100%; }
+  .mode-portrait  .sl-col-cards   { width: 100%; }
 </style>
-<section class="w-full h-full overflow-auto bg-white p-10">
-  <div class="flex items-center gap-3 mb-2">
-    <span class="text-xs font-bold tracking-widest uppercase" style="color:#1e3a5f;">Outcomes</span>
-  </div>
-  <h2 class="text-4xl font-bold text-slate-900 mb-6">Quantifiable Benefits</h2>
-  <p class="text-lg text-slate-600 mb-10 max-w-3xl">CVTailor delivers measurable impact across the entire hiring journey—from CV submission to interview success.</p>
-  <div class="sl-metrics-grid mb-12"><article class="flex-1 min-w-[200px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-        <h3 class="text-3xl font-bold leading-none mb-2" style="color:#1e3a5f;">3x</h3>
-        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">More targeted applications</h4>
-        <p class="text-slate-600 text-sm leading-relaxed">Tailor your CV to each role in minutes, not hours, enabling more strategic applications per week</p>
-      </article>
-      <article class="flex-1 min-w-[200px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-        <h3 class="text-3xl font-bold leading-none mb-2" style="color:#1e3a5f;">85%+</h3>
-        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">ATS keyword match</h4>
-        <p class="text-slate-600 text-sm leading-relaxed">AI ensures your tailored CV captures role-critical keywords that pass automated screening systems</p>
-      </article>
-      <article class="flex-1 min-w-[200px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-        <h3 class="text-3xl font-bold leading-none mb-2" style="color:#1e3a5f;">Instant</h3>
-        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">Interview feedback</h4>
-        <p class="text-slate-600 text-sm leading-relaxed">Mock interview AI scores your answers in real-time, helping you refine delivery before the real interview</p>
-      </article></div>
-  <div class="rounded-2xl p-8" style="background-color:#10b981;">
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-      <div class="flex-1">
-        <h3 class="text-sm font-bold uppercase tracking-widest text-white/70 mb-2">Primary ROI</h3>
-        <p class="text-4xl font-black text-white">Land interviews 3x faster</p>
-      </div>
-      <div class="flex-[2] text-white/90 text-xl leading-relaxed font-medium border-l-0 md:border-l border-white/20 md:pl-8">
-        By matching your CV directly to job requirements and walking into interviews with a personalized prep plan
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- ── Left: header panel ── -->
+    <div class="sl-col-header flex flex-col justify-center p-12"
+         style="background:#0F2044;">
+
+      <span class="text-xs font-bold uppercase tracking-widest mb-5"
+            style="color:rgba(34,197,94,0.9);">What You Get</span>
+
+      <h2 class="font-black text-white leading-snug mb-4"
+          style="font-size:2rem; line-height:1.2;">
+        Three deliverables.<br/>One session.
+      </h2>
+
+      <div class="w-10 h-1 rounded-full mb-5" style="background:#22C55E;"></div>
+
+      <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.65); max-width:260px;">
+        Every workflow produces three fully tailored, download-ready outputs —
+        anchored to the exact role you're targeting.
+      </p>
+
+      <div class="mt-8 flex items-center gap-2 px-4 py-2.5 rounded-xl"
+           style="background:rgba(34,197,94,0.15); width:fit-content;">
+        <span class="font-black text-white" style="font-size:1.6rem; line-height:1;">3</span>
+        <span class="text-xs font-semibold" style="color:#22C55E;">outputs per session</span>
       </div>
     </div>
+
+    <!-- ── Right: output cards ── -->
+    <div class="sl-col-cards flex flex-col justify-center p-12 gap-5"
+         style="background:#F7FAFF;">
+
+      <!-- Output A -->
+      <div class="rounded-2xl p-6 bg-white border flex gap-5 items-start"
+           style="border-color:#E2E8F0;">
+        <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
+             style="background:#E6F9EE;">
+          <svg class="w-6 h-6" fill="none" stroke="#16A34A" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h3 class="font-bold text-slate-800 text-sm">Tailored CV</h3>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full flex-shrink-0"
+                  style="background:#E6F9EE; color:#15803D;">Output A</span>
+          </div>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            Role-aligned, ATS-optimised rewrite with a diff/highlight view showing every
+            edit. Export as PDF immediately.
+          </p>
+        </div>
+      </div>
+
+      <!-- Output B -->
+      <div class="rounded-2xl p-6 bg-white border flex gap-5 items-start"
+           style="border-color:#E2E8F0;">
+        <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
+             style="background:#EFF6FF;">
+          <svg class="w-6 h-6" fill="none" stroke="#2563EB" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h3 class="font-bold text-slate-800 text-sm">Interview Prep Plan</h3>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full flex-shrink-0"
+                  style="background:#EFF6FF; color:#2563EB;">Output B</span>
+          </div>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            Structured, role-specific roadmap: key topics, question categories, company
+            research tips, and a study schedule. Downloadable PDF.
+          </p>
+        </div>
+      </div>
+
+      <!-- Output C -->
+      <div class="rounded-2xl p-6 flex gap-5 items-start"
+           style="background:#0F2044;">
+        <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
+             style="background:rgba(34,197,94,0.2);">
+          <svg class="w-6 h-6" fill="none" stroke="#22C55E" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-5l-5 5v-5z"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h3 class="font-bold text-white text-sm">Mock Interview</h3>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full flex-shrink-0"
+                  style="background:rgba(34,197,94,0.2); color:#22C55E;">Output C</span>
+          </div>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.65);">
+            AI asks role-relevant questions drawn from the actual job description. Answer,
+            then receive instant scored feedback on content, structure, and delivery.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
