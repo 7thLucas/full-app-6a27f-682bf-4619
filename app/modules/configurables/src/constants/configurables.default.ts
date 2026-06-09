@@ -12,35 +12,112 @@ export type TBrandColor = {
   accent: string;
 };
 
+export type TFeatureItem = {
+  title: string;
+  description: string;
+  icon?: string;
+};
+
+export type TFeaturesSection = {
+  title: string;
+  items: TFeatureItem[];
+};
+
+export type TStep = {
+  number: string;
+  title: string;
+  description?: string;
+};
+
+export type TStepsSection = {
+  title: string;
+  steps: TStep[];
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
+  tagline?: string;
   logoUrl: string;
   brandColor: TBrandColor;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  heroHeading?: string;
+  heroSubheading?: string;
+  heroCta?: string;
+  featuresSection?: TFeaturesSection;
+  stepsSection?: TStepsSection;
+  footerText?: string;
+  loginPageTitle?: string;
+  registerPageTitle?: string;
+  cvUploadLabel?: string;
+  jobInputLabel?: string;
+  analyzeCtaLabel?: string;
+  mockInterviewStartLabel?: string;
+  downloadCvLabel?: string;
+  showTestimonialsSection?: boolean;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "FILL_APP_NAME_HERE",
+  appName: "CVTailor",
+  tagline: "Paste a job. Get a tailored CV, interview plan, and mock interview — in minutes.",
   logoUrl: "FILL_LOGO_URL_HERE",
   brandColor: {
-    primary: "FILL_PRIMARY_COLOR_HERE",
-    secondary: "FILL_SECONDARY_COLOR_HERE",
-    accent: "FILL_ACCENT_COLOR_HERE",
+    primary: "#1B2D5B",
+    secondary: "#2ECC71",
+    accent: "#2ECC71",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // Required branding fields → use the FILL_X_HERE placeholder pattern.
-  // Optional/typed defaults → real value with a "// fill it here" comment:
-  //
-  //   maxItemsPerPage: 12,                     // fill it here
-  //   enableNotifications: true,               // fill it here
-  //   featuredCategories: [],                  // fill it here
-  //   defaultLanguage: "en",                   // must match enum options
-  //   launchDate: "2025-01-01T00:00:00.000Z",  // ISO-8601
-  //   heroImage: "",                           // resolved URL after upload
-  //   galleryImages: [],                       // array of resolved URLs
-  // ─────────────────────────────────────────────────────────────────────
+  heroHeading: "CV Sempurna untuk Pekerjaan Impianmu",
+  heroSubheading:
+    "Unggah CV-mu, tempel deskripsi pekerjaan, dan dapatkan CV yang disesuaikan, rencana persiapan wawancara, serta sesi latihan mock interview — semuanya dalam hitungan menit.",
+  heroCta: "Mulai Sekarang",
+  featuresSection: {
+    title: "Semua yang Kamu Butuhkan",
+    items: [
+      {
+        title: "CV yang Disesuaikan",
+        description:
+          "AI kami menulis ulang dan menyesuaikan CV-mu agar cocok dengan kata kunci dan persyaratan pekerjaan yang ditargetkan.",
+        icon: "FileText",
+      },
+      {
+        title: "Rencana Persiapan Wawancara",
+        description:
+          "Dapatkan peta jalan persiapan yang terstruktur — topik kunci, kategori pertanyaan, dan jadwal belajar.",
+        icon: "ClipboardList",
+      },
+      {
+        title: "Mock Interview Interaktif",
+        description:
+          "Latih wawancara dengan AI interviewer dan dapatkan feedback langsung atas setiap jawabanmu.",
+        icon: "MessageSquare",
+      },
+    ],
+  },
+  stepsSection: {
+    title: "Cara Kerja CVTailor",
+    steps: [
+      {
+        number: "1",
+        title: "Unggah CV",
+        description: "Upload CV-mu dalam format PDF atau tempel teks langsung.",
+      },
+      {
+        number: "2",
+        title: "Masukkan Info Pekerjaan",
+        description: "Tempel deskripsi lengkap pekerjaan yang kamu lamar.",
+      },
+      {
+        number: "3",
+        title: "Dapatkan Hasilnya",
+        description: "CV yang disesuaikan, rencana persiapan, dan sesi latihan siap untukmu.",
+      },
+    ],
+  },
+  footerText: "© 2026 CVTailor. Semua hak dilindungi.",
+  loginPageTitle: "Masuk ke CVTailor",
+  registerPageTitle: "Daftar CVTailor",
+  cvUploadLabel: "Unggah CV Kamu (PDF)",
+  jobInputLabel: "Deskripsi Pekerjaan",
+  analyzeCtaLabel: "Analisis CV Saya",
+  mockInterviewStartLabel: "Mulai Latihan",
+  downloadCvLabel: "Unduh CV Disesuaikan",
+  showTestimonialsSection: false,
 };
