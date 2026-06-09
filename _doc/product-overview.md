@@ -1,0 +1,1 @@
+Aplikasi Tailoring CV berdasarkan Job Entry dan Mengeluarkan plan untuk interview prep dan mock interview
