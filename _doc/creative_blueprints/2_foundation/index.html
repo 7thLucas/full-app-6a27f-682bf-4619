@@ -1,40 +1,87 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait  .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-col-problem  { width: 50%; height: 100%; }
+  .mode-portrait  .sl-col-problem  { width: 100%; }
+  .mode-landscape .sl-col-solution { width: 50%; height: 100%; }
+  .mode-portrait  .sl-col-solution { width: 100%; }
 </style>
-<section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#1e3a5f;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#1e3a5f; border-color:#1e3a5f30;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Generic CVs and unfocused interview prep waste time and reduce interview conversion rates</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Job seekers submit generic CVs that miss ATS keywords and specific role requirements, then scramble to prepare for interviews using disconnected tools. The result: lower interview conversion rates and wasted preparation effort.</p>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- ── Left: The Problem ── -->
+    <div class="sl-col-problem flex flex-col justify-center p-12"
+         style="border-right: 1px solid #E2E8F0;">
+
+      <span class="text-xs font-bold uppercase tracking-widest mb-5"
+            style="color:#EF4444;">The Problem</span>
+
+      <h2 class="font-black text-slate-900 leading-snug mb-6"
+          style="font-size:1.9rem; line-height:1.25;">
+        Job applications<br/>are still a shot<br/>in the dark.
+      </h2>
+
+      <div class="flex flex-col gap-4">
+
+        <div class="flex gap-3 items-start">
+          <span class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5
+                        font-bold text-white text-xs"
+                style="background:#EF4444;">1</span>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Most CVs are <strong>generic</strong> — not aligned to the keywords,
+            tone, or requirements an ATS or recruiter expects for the specific role.
+          </p>
         </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#1e3a5f;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#1e3a5f;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Job seekers often submit one-size-fits-all CVs that don&#x27;t align with specific job requirements, miss ATS keywords, and lack the strategic prep needed to stand out in interviews. Existing tools force users to juggle multiple platforms—one for CV optimization, another for interview practice—missing the critical connection between tailoring and preparation.</p>
+
+        <div class="flex gap-3 items-start">
+          <span class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5
+                        font-bold text-white text-xs"
+                style="background:#EF4444;">2</span>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Candidates enter interviews <strong>unprepared</strong> — no structured,
+            role-specific study plan, no practice with realistic questions.
+          </p>
         </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Job seekers (fresh graduates, mid-career professionals, career switchers) and recruitment coaches seeking faster, smarter interview conversion</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Empower candidates to present their best selves for every opportunity, reducing the friction between job search and interview success</p></div>
+
+        <div class="flex gap-3 items-start">
+          <span class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5
+                        font-bold text-white text-xs"
+                style="background:#EF4444;">3</span>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Existing tools are <strong>siloed</strong> — ATS optimisers don't prepare
+            you for the interview; mock-interview platforms don't start from your CV.
+          </p>
+        </div>
+
       </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">ATS Optimization</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Interview Prep</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">AI-Powered</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Job Matching</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Career Growth</span></div>
-      <div class="mt-8"><data-attribution /></div>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=Frustrated+professional+surrounded+by+scattered+job+applications%2C+resume+drafts%2C+and+interview+prep+notes%2C+confused&amp;keyspace=bsmfy51t&amp;user_id=4619" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- ── Right: The Solution ── -->
+    <div class="sl-col-solution flex flex-col justify-center p-12"
+         style="background:#F7FAFF;">
+
+      <span class="text-xs font-bold uppercase tracking-widest mb-5"
+            style="color:#22C55E;">The Solution</span>
+
+      <h2 class="font-black leading-snug mb-4"
+          style="font-size:1.9rem; line-height:1.25; color:#0F2044;">
+        One job entry.<br/>Everything you<br/>need to get the offer.
+      </h2>
+
+      <p class="text-slate-600 text-sm leading-relaxed mb-7" style="max-width:320px;">
+        CVTailor is the first <strong>job-entry-first</strong> platform that unifies
+        CV tailoring, interview prep, and mock interviews in a single intelligent
+        workflow — starting from the exact role you're targeting.
+      </p>
+
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=clean%20flat%20illustration%20of%20job%20listing%20flowing%20into%20tailored%20resume%20and%20interview%20checklist%2C%20navy%20and%20green%20accents%2C%20minimal%20modern%20design"
+        class="rounded-2xl object-cover w-full"
+        style="height:148px;"
+        alt=""
+      />
     </div>
+
   </div>
 </section>
