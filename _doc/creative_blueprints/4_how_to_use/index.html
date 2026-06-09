@@ -1,43 +1,112 @@
 <style>
-  .mode-landscape .sl-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-  .mode-portrait .sl-features-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .mode-landscape .sl-layout          { flex-direction: row; }
+  .mode-portrait  .sl-layout          { flex-direction: column; }
+  .mode-landscape .sl-col-primary     { width: 55%; height: 100%; }
+  .mode-portrait  .sl-col-primary     { width: 100%; }
+  .mode-landscape .sl-col-secondary   { width: 45%; height: 100%; }
+  .mode-portrait  .sl-col-secondary   { width: 100%; }
 </style>
-<section class="w-full h-full overflow-auto bg-white p-10">
-  <div class="flex items-center justify-between mb-2">
-    <p class="text-xs font-semibold tracking-widest uppercase" style="color:#1e3a5f;">Core Capabilities</p>
-    <div class="flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#1e3a5f; border-color:#1e3a5f30;">
-      <span class="text-xs font-semibold" style="color:#ffffff;">Enabled</span>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- ── Left: Primary persona (Job Seeker) ── -->
+    <div class="sl-col-primary flex flex-col justify-center p-12"
+         style="border-right: 1px solid #E2E8F0;">
+
+      <span class="text-xs font-bold uppercase tracking-widest mb-5 block"
+            style="color:#0F2044;">Primary User</span>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+             style="background:#0F2044;">
+          <svg class="w-5 h-5" fill="none" stroke="#22C55E" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z"/>
+          </svg>
+        </div>
+        <h2 class="font-black text-slate-900" style="font-size:1.65rem;">Job Seeker</h2>
+      </div>
+
+      <div class="w-8 h-1 rounded-full mb-5" style="background:#22C55E;"></div>
+
+      <p class="text-slate-600 text-sm leading-relaxed mb-6" style="max-width:320px;">
+        Actively targeting a specific role — uses CVTailor to maximise callback chances
+        and walk into every interview fully prepared.
+      </p>
+
+      <div class="flex flex-col gap-3">
+        <div class="flex gap-3 items-center">
+          <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#22C55E;"></span>
+          <span class="text-slate-700 text-xs font-medium">Tailors CV to each role in under 5 minutes</span>
+        </div>
+        <div class="flex gap-3 items-center">
+          <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#22C55E;"></span>
+          <span class="text-slate-700 text-xs font-medium">Reviews gap analysis — knows exactly what to fix</span>
+        </div>
+        <div class="flex gap-3 items-center">
+          <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#22C55E;"></span>
+          <span class="text-slate-700 text-xs font-medium">Follows a role-specific interview prep plan</span>
+        </div>
+        <div class="flex gap-3 items-center">
+          <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#22C55E;"></span>
+          <span class="text-slate-700 text-xs font-medium">Practises the mock interview with instant AI feedback</span>
+        </div>
+        <div class="flex gap-3 items-center">
+          <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#22C55E;"></span>
+          <span class="text-slate-700 text-xs font-medium">Downloads ATS-optimised CV and prep plan as PDFs</span>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <h1 class="text-3xl font-bold text-slate-900 mb-4 leading-tight">Effortless Product Experience</h1>
-  <p class="text-slate-600 text-lg mb-8 max-w-2xl">Intuitive features designed for seamless adoption and long-term value delivery.</p>
-  <div class="sl-features-grid">
-    <div class="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-5 shadow-sm">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
-               <span class="text-xl">✨</span>
-            </div>
-            <h3 class="font-bold text-slate-900 text-base">Paste the job</h3>
-          </div>
-          <p class="text-slate-600 text-sm leading-relaxed">Drop in a job title, description, or full posting. CVTailor analyzes the role, requirements, and company tone in seconds.</p>
+
+    <!-- ── Right: Secondary persona (Career Coach) ── -->
+    <div class="sl-col-secondary flex flex-col justify-center p-12"
+         style="background:#F7FAFF;">
+
+      <span class="text-xs font-bold uppercase tracking-widest mb-5 block"
+            style="color:#64748B;">Secondary User</span>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 border-2"
+             style="border-color:#0F2044;">
+          <svg class="w-5 h-5" fill="none" stroke="#0F2044" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0"/>
+          </svg>
         </div>
-        <div class="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-5 shadow-sm">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
-               <span class="text-xl">✨</span>
-            </div>
-            <h3 class="font-bold text-slate-900 text-base">Upload your CV</h3>
+        <h2 class="font-black text-slate-800" style="font-size:1.45rem;">Career Coach</h2>
+      </div>
+
+      <div class="w-8 h-1 rounded-full mb-5" style="background:#CBD5E1;"></div>
+
+      <p class="text-slate-600 text-sm leading-relaxed mb-6">
+        Reviews tailored outputs with clients — using CVTailor as a structured coaching
+        tool for targeted, role-specific guidance.
+      </p>
+
+      <div class="rounded-2xl p-5 border bg-white"
+           style="border-color:#E2E8F0;">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+          Used For
+        </p>
+        <div class="flex flex-col gap-2.5">
+          <div class="flex gap-2 items-center">
+            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#0F2044;"></span>
+            <span class="text-slate-600 text-xs">Reviewing the tailored CV and change diff with clients</span>
           </div>
-          <p class="text-slate-600 text-sm leading-relaxed">Share your resume (PDF or text). The AI extracts skills, experience, and achievements for intelligent matching.</p>
-        </div>
-        <div class="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-5 shadow-sm">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
-               <span class="text-xl">✨</span>
-            </div>
-            <h3 class="font-bold text-slate-900 text-base">Get three outputs</h3>
+          <div class="flex gap-2 items-center">
+            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#0F2044;"></span>
+            <span class="text-slate-600 text-xs">Walking through gap analysis together</span>
           </div>
-          <p class="text-slate-600 text-sm leading-relaxed">Receive a tailored CV preview, a structured interview prep plan, and jump into a mock interview session with live feedback.</p>
+          <div class="flex gap-2 items-center">
+            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#0F2044;"></span>
+            <span class="text-slate-600 text-xs">Running structured mock interview practice sessions</span>
+          </div>
         </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
